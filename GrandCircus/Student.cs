@@ -18,7 +18,6 @@ namespace GrandCircus
         public Student()
         {
             this.Courses = new HashSet<Course>();
-            this.Enrolls = new HashSet<Enroll>();
         }
     
         public int ID { get; set; }
@@ -29,7 +28,5 @@ namespace GrandCircus
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Course> Courses { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Enroll> Enrolls { get; set; }
     }
 }

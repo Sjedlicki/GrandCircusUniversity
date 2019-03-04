@@ -176,15 +176,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Course.cs">
-      <DependentUpon>StudentModel.tt</DependentUpon>
+      <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Enroll.cs">
-      <DependentUpon>StudentModel.tt</DependentUpon>
+      <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -195,22 +195,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Student.cs">
-      <DependentUpon>StudentModel.tt</DependentUpon>
+      <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="StudentModel.Context.cs">
+    <Compile Include="User.cs">
+      <DependentUpon>UserModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>StudentModel.Context.tt</DependentUpon>
+      <DependentUpon>UserModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="StudentModel.cs">
+    <Compile Include="UserModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>StudentModel.tt</DependentUpon>
+      <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="StudentModel.Designer.cs">
+    <Compile Include="UserModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>StudentModel.edmx</DependentUpon>
+      <DependentUpon>UserModel.edmx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -235,16 +238,16 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="StudentModel.Context.tt">
+    <Content Include="UserModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StudentModel.edmx</DependentUpon>
-      <LastGenOutput>StudentModel.Context.cs</LastGenOutput>
+      <DependentUpon>UserModel.edmx</DependentUpon>
+      <LastGenOutput>UserModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="StudentModel.edmx.sql" />
-    <Content Include="StudentModel.tt">
+    <Content Include="UserModel.edmx.sql" />
+    <Content Include="UserModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>StudentModel.edmx</DependentUpon>
-      <LastGenOutput>StudentModel.cs</LastGenOutput>
+      <DependentUpon>UserModel.edmx</DependentUpon>
+      <LastGenOutput>UserModel.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -280,23 +283,23 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <EntityDeploy Include="StudentModel.edmx">
+    <EntityDeploy Include="UserModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>StudentModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>UserModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="StudentModel.edmx.diagram">
-      <DependentUpon>StudentModel.edmx</DependentUpon>
+    <Content Include="UserModel.edmx.diagram">
+      <DependentUpon>UserModel.edmx</DependentUpon>
     </Content>
-    <Content Include="Views\Student\Create.cshtml" />
-    <Content Include="Views\Student\Delete.cshtml" />
-    <Content Include="Views\Student\Details.cshtml" />
-    <Content Include="Views\Student\Edit.cshtml" />
-    <Content Include="Views\Student\Index.cshtml" />
-    <Content Include="Views\Course\Create.cshtml" />
-    <Content Include="Views\Course\Delete.cshtml" />
-    <Content Include="Views\Course\Details.cshtml" />
-    <Content Include="Views\Course\Edit.cshtml" />
-    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Courses\Create.cshtml" />
+    <Content Include="Views\Courses\Delete.cshtml" />
+    <Content Include="Views\Courses\Details.cshtml" />
+    <Content Include="Views\Courses\Edit.cshtml" />
+    <Content Include="Views\Courses\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

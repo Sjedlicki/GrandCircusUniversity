@@ -13,10 +13,10 @@ namespace GrandCircus
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StudentDBContext : DbContext
+    public partial class UserDbContext : DbContext
     {
-        public StudentDBContext()
-            : base("name=StudentDBContext")
+        public UserDbContext()
+            : base("name=UserDbContext")
         {
         }
     
@@ -28,5 +28,6 @@ namespace GrandCircus
         public virtual DbSet<Course> Courses { get; set; }
         public virtual DbSet<Enroll> Enrolls { get; set; }
         public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

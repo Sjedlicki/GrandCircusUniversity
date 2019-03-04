@@ -10,17 +10,17 @@ using GrandCircus;
 
 namespace GrandCircus.Controllers
 {
-    public class CourseController : Controller
+    public class CoursesController : Controller
     {
-        private StudentDBContext db = new StudentDBContext();
+        private UserDbContext db = new UserDbContext();
 
-        // GET: Course
+        // GET: Courses
         public ActionResult Index()
         {
             return View(db.Courses.ToList());
         }
 
-        // GET: Course/Details/5
+        // GET: Courses/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace GrandCircus.Controllers
             return View(course);
         }
 
-        // GET: Course/Create
+        // GET: Courses/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Course/Create
+        // POST: Courses/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace GrandCircus.Controllers
             return View(course);
         }
 
-        // GET: Course/Edit/5
+        // GET: Courses/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace GrandCircus.Controllers
             return View(course);
         }
 
-        // POST: Course/Edit/5
+        // POST: Courses/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace GrandCircus.Controllers
             return View(course);
         }
 
-        // GET: Course/Delete/5
+        // GET: Courses/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace GrandCircus.Controllers
             return View(course);
         }
 
-        // POST: Course/Delete/5
+        // POST: Courses/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

@@ -12,12 +12,9 @@ namespace GrandCircus
     using System;
     using System.Collections.Generic;
     
-    public partial class Enroll
+    public partial class User
     {
-        public int ID { get; set; }
-        public int StudentID { get; set; }
-        public int CourseID { get; set; }
-        public Nullable<System.DateTime> EnrollDate { get; set; }
-        public string Grade { get; set; }
+        public int Id { get; set; }
+        public string Property { get; set; }
     }
 }
