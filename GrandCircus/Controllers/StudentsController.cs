@@ -10,7 +10,6 @@ using GrandCircus;
 
 namespace GrandCircus.Controllers
 {
-    [Authorize(Roles = "Admin")]
     public class StudentsController : Controller
     {        
         private UserDbContext db = new UserDbContext();
