@@ -64,6 +64,9 @@ namespace GrandCircus.Models
 
     public class RegisterViewModel
     {
+        //Storing users for drop down list in AssignRoleToUser View
+        public string Name { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
